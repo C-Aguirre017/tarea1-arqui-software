@@ -1,0 +1,10 @@
+{
+  "name": "tarea1-arqui-software",
+  "private": true,
+  "scripts": {
+    "start": "meteor run"
+  },
+  "dependencies": {
+    "meteor-node-stubs": "~0.2.0"
+  }
+}
