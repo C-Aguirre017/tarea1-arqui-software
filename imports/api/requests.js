@@ -22,7 +22,6 @@ RequestModel.schema = new SimpleSchema({
 });
 
 //Get IP Address
-const SHOW_NUMBER = 10;
 if (Meteor.isServer) {
   Meteor.onConnection(function(conn) {
       const ip = conn.clientAddress;
@@ -31,7 +30,7 @@ if (Meteor.isServer) {
   });
 
   Meteor.publish('requests', function requestsPublication() {
-    return RequestModel.find({},{sort: {created_at: -1}, limit: SHOW_NUMBER});
+    return RequestModel.find({},{sort: {created_at: -1}});
   });
 }
 
