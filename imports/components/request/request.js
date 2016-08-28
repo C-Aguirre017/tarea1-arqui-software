@@ -10,15 +10,17 @@ class RequestCtrl {
       $scope.viewModel(this);
 
       this.subscribe('requests');
+      this.numRequests = SHOW_NUMBER;
 
       this.helpers({
         requests() {
-          let aux = RequestModel.find({},{sort: {created_at: -1}, limit: SHOW_NUMBER});
-          this.numRequests = aux.count();
-          return aux;
+          return RequestModel.find({},{sort: {created_at: -1}, limit: this.getReactively('numRequests')});
         },
         count(){
           return RequestModel.find({}).count();
+        },
+        reload(){
+          console.log("OUCH");
         }
       })
     }
