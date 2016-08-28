@@ -1,0 +1,19 @@
+<header>
+  <h1>{{$ctrl.numRequests}} last Requests</h1>
+  <small>{{$ctrl.numRequests}} Request shown of {{$ctrl.count}} </small>
+</header>
+
+<table class='table'>
+  <thead>
+    <th>IP</th>
+    <th>Date of Request</th>
+    <th cols='2'>User Agent</th>
+  </thead>
+  <tbody>
+    <tr ng-repeat="request in $ctrl.requests" >
+      <td>{{request.ip}}</td>
+      <td>{{request.created_at}}</td>
+      <td cols='2' >{{request.userAgent}}</td>
+    </tr>
+  </tbody>
+</table>
