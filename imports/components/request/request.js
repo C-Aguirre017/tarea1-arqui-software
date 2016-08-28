@@ -1,7 +1,6 @@
 import angular from 'angular';
 import angularMeteor from 'angular-meteor';
 import requestTemplate from './request.html';
-
 import { RequestModel } from '../../api/requests.js';
 
 const SHOW_NUMBER = 10;

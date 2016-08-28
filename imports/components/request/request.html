@@ -6,14 +6,14 @@
 <table class='table'>
   <thead>
     <th>IP</th>
-    <th>Date of Request</th>
-    <th cols='2'>User Agent</th>
+    <th cols='2'>Date of Request</th>
+    <th cols='3'>User Agent</th>
   </thead>
   <tbody>
     <tr ng-repeat="request in $ctrl.requests" >
       <td>{{request.ip}}</td>
-      <td>{{request.created_at}}</td>
-      <td cols='2' >{{request.userAgent}}</td>
+      <td cols='2'>{{request.created_at}}</td>
+      <td cols='3' >{{request.userAgent}}</td>
     </tr>
   </tbody>
 </table>
