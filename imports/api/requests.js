@@ -1,7 +1,6 @@
 import { Meteor } from 'meteor/meteor';
 import { Mongo } from 'meteor/mongo';
 import { check } from 'meteor/check';
-import dateFormat from 'dateformat';
 
 export const RequestModel = new Mongo.Collection('requests');
 
@@ -42,7 +41,7 @@ Meteor.methods({
     RequestModel.insert({
       ip: ip,
       userAgent: userAgent,
-      created_at: dateFormat(new Date())
+      created_at: new Date()
     });
   }
 });

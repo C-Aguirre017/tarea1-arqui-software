@@ -1,16 +1,17 @@
-#docker-compose
 version: '2'
 services:
-  meteor-app:
-    build: .
-    depends_on:
-      - mongo
-    ports:
-      - "8543:3000"
-    environment:
-      MONGO_URL: mongodb://mongo:27017/app
-      ROOT_URL: http://localhost:3000
   mongo:
     image: mongo
     ports:
-      - "27017"
+    - "27017"
+  web:
+    image: danieldent/meteor
+    volumes:
+      - ./:/app
+    ports:
+      - "80:3000"
+    environment:
+      - MONGO_URL=mongodb://mongo:27017/app
+      - ROOT_URL=http://localhost:3000
+    links:
+      - mongo
