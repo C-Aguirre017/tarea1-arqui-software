@@ -14,37 +14,37 @@
 
 
 3. cd to the actual repository
-```
-cd <your_repository>
-```
+  ```
+  cd <your_repository>
+  ```
 
 4. Run docker-compose
-```
-docker-compose up -d
-```
+  ```
+  docker-compose up -d
+  ```
 
 5. Look for the container id
-```
-docker ps
-```
+  ```
+  docker ps
+  ```
 
 5. Install Angular on the container
-```
-docker exec <container_id> meteor npm install --save angular angular-meteor dateformat
-```
+  ```
+  docker exec <container_id> meteor npm install --save angular angular-meteor dateformat
+  ```
 
 6. If everything is okay it should be running
-```
-docker-compose ps
-```
+  ```
+  docker-compose ps
+  ```
 
 7. To stop and remove just do
-```
-docker-compose stop
-```
-```
-docker-compose rm
-```
+  ```
+  docker-compose stop
+  ```
+  ```
+  docker-compose rm
+  ```
 
 ## Example
 
