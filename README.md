@@ -48,7 +48,7 @@
 
 ## Example
 
-- http://52.67.149.100/
+- http://52.67.145.13/
 
 ## References
 - https://www.meteor.com/tutorials/angular/creating-an-app
